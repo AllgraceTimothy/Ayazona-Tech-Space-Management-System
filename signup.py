@@ -128,7 +128,7 @@ class SignUpPage(ft.UserControl):
           width=self.page.window.width,
           height=self.page.window_height,
           fit=ft.ImageFit.COVER,
-          opacity=0.20,
+          opacity=0.25,
         ),
         ft.Column(
           alignment=ft.MainAxisAlignment.CENTER,

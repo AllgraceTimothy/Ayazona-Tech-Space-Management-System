@@ -77,15 +77,15 @@ class GenerateReceipt(ft.UserControl):
       alignment=ft.MainAxisAlignment.CENTER,
       horizontal_alignment=ft.CrossAxisAlignment.CENTER,
       controls=[
-        ft.Text(f"Ayazona Techspace Receipt", size=26, weight="bold"),
+        ft.Text(f"Ayazona Techspace Receipt", size=28, weight="bold"),
         ft.Text(f"Purchase Date: {formatted_date}", size=18),
         ft.Text("----------------------------------------------------------------------------------------------------"),
         ft.DataTable(
           columns=[
-            ft.DataColumn(ft.Text("Product Name")),
-            ft.DataColumn(ft.Text("Quantity")),
-            ft.DataColumn(ft.Text("Unit Price")),
-            ft.DataColumn(ft.Text("Total Price")),
+            ft.DataColumn(ft.Text("Product Name", size=20, weight="bold")),
+            ft.DataColumn(ft.Text("Quantity", size=20, weight="bold")),
+            ft.DataColumn(ft.Text("Unit Price", size=20, weight="bold")),
+            ft.DataColumn(ft.Text("Total Price", size=20, weight="bold")),
           ],
           rows=row,
         ),
@@ -128,7 +128,7 @@ class GenerateReceipt(ft.UserControl):
               self.receipt_column,
               self.back_btn,
             ],
-            height=490,
+            height=500,
             scroll=ft.ScrollMode.ALWAYS,
           )
         ]

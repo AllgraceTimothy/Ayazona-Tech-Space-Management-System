@@ -16,7 +16,7 @@ class HomePage(ft.UserControl):
       width=self.page.window.width,
       height=self.page.window.height,
       fit=ft.ImageFit.COVER,
-      opacity=0.23,
+      opacity=0.27,
     )
     # Creates the Welcome message and the Siignup and Log-in Buttons
     self.column = ft.Column(
