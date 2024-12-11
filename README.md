@@ -32,6 +32,7 @@
   2. Navigate into your folder from your Code Editor.
   3. Create a virtual environment in this folder
    - Give the following command in the terminal -> "python -m venv env" (env-name of your virtual environment. Can be anything)
+   - Might take some time kindly remain patient 😇
   4. Navigate into your virtual environment
    - Give the following command in the terminal -> "env\Scripts\activate" (again {env} can be anything)
   5. Clone the Repository in your virtual environment:
@@ -39,6 +40,7 @@
    - Give the following command in the terminal -> "cd Ayazona-Tech-Space-Management-System"
   6. Install Dependencies:
    - Give the following command in the terminal -> "pip install -r requirements.txt"
+   - Might also take a while 😇
   7. Run the Application:
    - In desktop GUI: Give the following command in the terminal -> "flet run landing_page.py"
    - In a we browser: Give the following command in the terminal -> "flet run --web landing_page.py"
