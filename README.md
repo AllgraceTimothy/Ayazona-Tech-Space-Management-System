@@ -29,7 +29,7 @@
  ## Steps:
   1. Clone the Repository:
    - git clone https://github.com/AllgraceTimothy/Ayazona-TechPlace-Management-System.git
-    cd ayazona-techplace
+   - cd ayazona-techplace
   2. Install Dependencies:
    - pip install -r requirements.txt
   3. Run the Application:
@@ -53,8 +53,8 @@
  - Backend: SQLite3 Database
  - Programming Language: Python
  - Libraries Used:
-  - datetime (tracking purchase dates)
-  - flet (GUI framework)
+  -- datetime (tracking purchase dates)
+  -- flet (GUI framework)
 
 # 👥 Contributors
  - Timothy Allgrace (https://github.com/AllgraceTimothy) - Developer
