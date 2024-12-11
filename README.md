@@ -53,8 +53,8 @@
  - Backend: SQLite3 Database
  - Programming Language: Python
  - Libraries Used:
-  -- datetime (tracking purchase dates)
-  -- flet (GUI framework)
+   i- datetime (tracking purchase dates)
+   ii- flet (GUI framework)
 
 # 👥 Contributors
  - Timothy Allgrace (https://github.com/AllgraceTimothy) - Developer
