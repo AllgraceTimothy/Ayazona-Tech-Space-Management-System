@@ -5,7 +5,7 @@
  ## Manager Dashboard:
   - Add, update, and manage inventory in real-time.
   - Edit stock levels and unit prices seamlessly.
-  - Monitor invontory changes with ease.
+  - Monitor inventory changes with ease.
  ## Customer Dashboard:
   - Browse available products in a simple and intuitive interface.
   - Make secure purchases effortlessly.
@@ -30,4 +30,35 @@
   1. Clone the Repository:
    - git clone https://github.com/AllgraceTimothy/Ayazona-TechPlace-Management-System.git
     cd ayazona-techplace
+  2. Install Dependencies:
+   - pip install -r requirements.txt
+  3. Run the Application:
+   - python landing_page.py
+  4. Open the Application in your Browser or on the provided desktop GUI
+
+# 📖 Usage
+ 1. Manager Login:
+  - Use your manager credentials to log in.
+  - Navigate to the dashboard to manage inventory, update stock, and edit product prices.
+
+ 2. Customer Login:
+  - Log in with your customer credentials.
+  - Browse products, make purchases, and receive real-time updates.
+
+ 3. Tracking Purchases:
+  - The system automatically records all customer transactions for future reference.
+
+# 🛠️ Technologies Used
+ - Frontend: Flet (Python-Based GUI framework)
+ - Backend: SQLite3 Database
+ - Programming Language: Python
+ - Libraries Used:
+  - datetime (tracking purchase dates)
+  - flet (GUI framework)
+
+# 👥 Contributors
+ - Timothy Allgrace (https://github.com/AllgraceTimothy) - Developer
+
+# 📝 License
+ - This project is licensed under the MIT License.
 
