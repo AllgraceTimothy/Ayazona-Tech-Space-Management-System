@@ -26,7 +26,7 @@ class HomePage(ft.UserControl):
       horizontal_alignment=ft.CrossAxisAlignment.CENTER,
       controls=[
         ft.Text(
-          "Welcome to Ayazona Techspace",
+          "Welcome to Ayazona Tech-Space",
           size=28,
           weight="bold",
           text_align=ft.TextAlign.CENTER,

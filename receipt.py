@@ -77,7 +77,7 @@ class GenerateReceipt(ft.UserControl):
       alignment=ft.MainAxisAlignment.CENTER,
       horizontal_alignment=ft.CrossAxisAlignment.CENTER,
       controls=[
-        ft.Text(f"Ayazona Techspace Receipt", size=28, weight="bold"),
+        ft.Text(f"Ayazona Tech-Space Receipt", size=28, weight="bold"),
         ft.Text(f"Purchase Date: {formatted_date}", size=18),
         ft.Text("----------------------------------------------------------------------------------------------------"),
         ft.DataTable(

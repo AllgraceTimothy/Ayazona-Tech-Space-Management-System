@@ -25,7 +25,7 @@ class MainPage(ft.UserControl):
   def create_welcome_text(self):
       """Create the welcome text for the main page."""
       return ft.Text(
-          "Welcome to the Ayazona Techplace!\nYour one-stop-shop for all electronic products",
+          "Welcome to the Ayazona Tech-Space!\nYour one-stop-shop for all electronic products",
           size=28,
           weight="bold",
           text_align=ft.TextAlign.CENTER,
@@ -81,7 +81,7 @@ class MainPage(ft.UserControl):
 
 def main(page: ft.Page):
     """Set up the page settings and add the MainPage control."""
-    page.title = "Ayazona Techspace"
+    page.title = "Ayazona Tech-Space"
     page.theme_mode = "dark"
     page.window.width = 720
     page.window.height = 650
