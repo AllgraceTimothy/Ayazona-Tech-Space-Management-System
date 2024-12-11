@@ -1,7 +1,7 @@
-# Ayazona Tech-Place Management System
+Ayazona Tech-Place Management System
   -A comprehensive system for managing shopping mall inventory and facilitating customer purchases, with a user-friendly interface built using Flet and a robust SQLite3 database backend.
 
-#🚀 Features
+🚀 Features
  #Manager Dashboard:
   - Add, update, and manage inventory in real-time.
   - Edit stock levels and unit prices with ease.
