@@ -36,7 +36,7 @@
    - Give the following command in the terminal -> "env\Scripts\activate" (again {env} can be anything)
   5. Clone the Repository in your virtual environment:
    - Give the following command in the terminal -> "git clone https://github.com/AllgraceTimothy/Ayazona-Tech-Space-Management-System"
-   - Give the following command in the terminal -> "cd Ayazona-TechPlace-Management-System"
+   - Give the following command in the terminal -> "cd Ayazona-Tech-Space-Management-System"
   6. Install Dependencies:
    - Give the following command in the terminal -> "pip install -r requirements.txt"
   7. Run the Application:
