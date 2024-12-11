@@ -1,0 +1,35 @@
+CREATE TABLE IF NOT EXISTS customers (
+  customer_id INTEGER PRIMARY KEY AUTOINCREMENT,
+  user_name TEXT NOT NULL,
+  email TEXT UNIQUE NOT NULL,
+  passwd TEXT NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS managers (
+  manager_id INTEGER PRIMARY KEY AUTOINCREMENT,
+  user_name TEXT NOT NULL,
+  email TEXT UNIQUE NOT NULL,
+  passwd TEXT NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS products (
+  product_id INTEGER PRIMARY KEY AUTOINCREMENT,
+  product_name TEXT NOT NULL,
+  quantity INTEGER NOT NULL,
+  unit_price FLOAT NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS purchases (
+  purchase_id INTEGER PRIMARY KEY AUTOINCREMENT,
+  customer_id INTEGER,
+  product_id INTEGER,
+  quantity INTEGER,
+  total_price REAL,
+  purchase_date TEXT DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY(customer_id) REFERENCES customers(customer_id) ON DELETE CASCADE ON UPDATE CASCADE,
+  FOREIGN KEY(product_id) REFERENCES products(product_id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+
+
+
