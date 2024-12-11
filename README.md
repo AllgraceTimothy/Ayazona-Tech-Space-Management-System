@@ -64,6 +64,7 @@
  - Libraries Used:
   - datetime (tracking purchase dates)
   - flet (GUI framework)
+  - re (validating format of username, email, and password)
 
 # 👥 Contributors
  - Timothy Allgrace (https://github.com/AllgraceTimothy) - Developer

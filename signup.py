@@ -1,4 +1,5 @@
 import flet as ft
+import re
 from Ayazona_db_manager import save_customer, save_manager
 SECRET_KEY = "sct_key.765"
 
@@ -32,7 +33,7 @@ class SignUpPage(ft.UserControl):
       disabled=True,
       width=350,
         )
-    self.status = ft.Text(value="", color="red")
+    self.status = ft.Text(value="", color="red", text_align="center")
     self.page.snack_bar = ft.SnackBar(ft.Text(""), open=False)
 
   def show_snack_bar(self, message):
@@ -46,6 +47,19 @@ class SignUpPage(ft.UserControl):
     self.secret_key.disabled = self.account_type.value != str("Manager")
     self.page.update(self.secret_key)
 
+  def validate_username(self, username):
+    # Ensures the username is between 5 and 20 characters and only contains alphanumeric and underscores/dashes
+    # and contains at least one letter (both uppercase or lowercase)
+    return re.match(r'^(?=.*[A-Za-z])[A-Za-z0-9 _-]{5,20}$', username)
+  
+  def validate_email(self, email):
+    # Regex to validate a proper email format
+    return re.match(r'^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$', email)
+  
+  def validate_password(self, password):
+    # Validates password to have at least 8 characters, a number, a lowercase and uppercase letter, and a special character
+    return re.match(r'^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&#+-])[A-Za-z\d@$!%*?&#+-]{8,}$', password)
+
   def signup(self, e):
     # Handles account creation
     username = self.username.value
@@ -56,6 +70,15 @@ class SignUpPage(ft.UserControl):
     if self.account_type.value == "Customer":
       if not username or not email or not password:
         self.status.value = "Please fill in all the fields"
+        self.page.update(self.status)
+      elif not self.validate_username(username):
+        self.status.value = "Invalid username. It should be 5-20 characters long and contain only alphanumeric characters, underscores, or dashes"
+        self.page.update(self.status)
+      elif not self.validate_email(email):
+        self.status.value = "Invalid email address format"
+        self.page.update(self.status)
+      elif not self.validate_password(password):
+        self.status.value = "Password should be at least 8 characters long and contain at least one number,\none uppercase letter, and one special character"
         self.page.update(self.status)
       else:
         success = save_customer(username, email, password)
