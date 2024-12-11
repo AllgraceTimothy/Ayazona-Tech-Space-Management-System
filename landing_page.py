@@ -29,7 +29,7 @@ class MainPage(ft.UserControl):
           size=28,
           weight="bold",
           text_align=ft.TextAlign.CENTER,
-          color=ft.colors.WHITE,
+          color=ft.colors.ORANGE_ACCENT_200,
       )
 
   def create_action_buttons(self):

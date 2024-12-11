@@ -33,7 +33,8 @@
   2. Install Dependencies:
    - pip install -r requirements.txt
   3. Run the Application:
-   - python landing_page.py
+   - In desktop GUI: flet run landing_page.py
+   - In a we browser: flet run --web landing_page.py
   4. Open the Application in your Browser or on the provided desktop GUI
 
 # 📖 Usage
@@ -53,8 +54,8 @@
  - Backend: SQLite3 Database
  - Programming Language: Python
  - Libraries Used:
-  i) datetime (tracking purchase dates)
-  ii) flet (GUI framework)
+  i- datetime (tracking purchase dates)
+  ii- flet (GUI framework)
 
 # 👥 Contributors
  - Timothy Allgrace (https://github.com/AllgraceTimothy) - Developer
