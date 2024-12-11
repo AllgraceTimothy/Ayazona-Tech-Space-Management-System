@@ -1,4 +1,4 @@
-# Ayazona Tech-Place Management System
+# Ayazona Tech-Space Management System
   - A powerful and user-friendly solution for managing shopping mall inventory and facilitating customer purchases. Built with Flet for an intuitive user interface and SQLite3 for a reliable and efficient backend.
 
 # 🚀 Features
@@ -11,12 +11,12 @@
   - Make secure purchases effortlessly.
  ## Secure Login System:
   - Separate login for managers and customers.
-  - User credentials are securely stored in the database.
+  - User's credentials are securely stored in the database.
  ## Real-Time Inventory Updates:
   - Automatic stock adjustment after customer purchases.
   - Instantly updated stock availability for both managers and customers.
  ## Purchase History Tracking:
-  - Maintain a detailed record of customer purchases, including:
+  - Maintains a detailed record of customer purchases, including:
    - Product: Name and ID.
    - Quantity: Number of items purchased.
    - Total Price: Cost of the purchase.
@@ -32,7 +32,7 @@
   2. Navigate into your folder from your Code Editor.
   3. Create a virtual environment in this folder
    - Give the following command in the terminal -> "python -m venv env" (env-name of your virtual environment. Can be anything)
-  4. Navgate into your virtual environment
+  4. Navigate into your virtual environment
    - Give the following command in the terminal -> "env\Scripts\activate" (again {env} can be anything)
   5. Clone the Repository in your virtual environment:
    - Give the following command in the terminal -> "git clone https://github.com/AllgraceTimothy/Ayazona-Tech-Space-Management-System"

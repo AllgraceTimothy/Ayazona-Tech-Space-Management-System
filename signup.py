@@ -98,6 +98,15 @@ class SignUpPage(ft.UserControl):
       elif entered_secret_key!= SECRET_KEY:
         self.status.value = "Incorrect Secret Key Please try again"
         self.page.update(self.status)
+      elif not self.validate_username(username):
+        self.status.value = "Invalid username. It should be 5-20 characters long and contain only alphanumeric characters, underscores, or dashes"
+        self.page.update(self.status)
+      elif not self.validate_email(email):
+        self.status.value = "Invalid email address format"
+        self.page.update(self.status)
+      elif not self.validate_password(password):
+        self.status.value = "Password should be at least 8 characters long and contain at least one number,\none uppercase letter, and one special character"
+        self.page.update(self.status)
       else:
         success = save_manager(username, email, password)
         if success:
