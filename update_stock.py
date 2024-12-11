@@ -169,11 +169,11 @@ class UpdateStockPage(ft.UserControl):
           alignment=ft.Alignment(0.0, 0.0),
           controls=[
             ft.Image(
-              src="assets/Update_stock2.jpeg",
+              src="background_images/update_stock_bg.jpg",
               width=self.page.window.width,
               height=self.page.window.height,
               fit=ft.ImageFit.COVER,
-              opacity=0.25,
+              opacity=0.17,
             ),
             ft.Column(
               alignment=ft.MainAxisAlignment.CENTER,

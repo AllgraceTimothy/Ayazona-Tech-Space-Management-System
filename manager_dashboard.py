@@ -146,11 +146,11 @@ class ManagerDashboard(ft.UserControl):
       alignment=ft.Alignment(0.0, 0.0),
         controls=[
           ft.Image(
-            src="assets/man_dash.jpeg",
+            src="background_images/manager_dash_bg.jpg",
             width=self.page.window.width,
             height=self.page.window.height,
             fit=ft.ImageFit.COVER,
-            opacity=0.15,
+            opacity=0.20,
           ),
           ft.Column(
             alignment=ft.MainAxisAlignment.CENTER,

@@ -98,11 +98,11 @@ class ManagerLoginPage(ft.UserControl):
             alignment=ft.Alignment(0.0, 0.0),
                 controls=[
                     ft.Image(
-                        src="assets/manager_login.jpeg",
+                        src="background_images/manager_login_bg.jpg",
                         width=self.page.window.width,
                         height=self.page.window.height,
                         fit=ft.ImageFit.COVER,
-                        opacity=0.17,
+                        opacity=0.20,
                     ),
                     ft.Column(
                         alignment=ft.MainAxisAlignment.CENTER,

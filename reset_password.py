@@ -177,7 +177,7 @@ class ChangePasswordPage(ft.UserControl):
         alignment=ft.Alignment(0.0, 0.0),
         controls=[
           ft.Image(
-            src="assets/manager_login3.jpeg",
+            src="background_images/reset_password_bg.jpg",
             width=self.page.window.width,
             height=self.page.window_height,
             fit=ft.ImageFit.COVER,

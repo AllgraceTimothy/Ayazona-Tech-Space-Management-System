@@ -89,9 +89,9 @@ def main(page: ft.Page):
     page.bgcolor = ft.colors.TRANSPARENT
     page.decoration = ft.BoxDecoration(
         image=ft.DecorationImage(
-            src="assets/hom.jpeg",
+            src="background_images/landing_page_bg.jpg",
             fit=ft.ImageFit.COVER,
-            opacity=0.10,
+            opacity=0.2,
         )
     )
 

@@ -12,7 +12,7 @@ class HomePage(ft.UserControl):
 
     # Sets the background image for the page
     self.image = ft.Image(
-      src="assets/home.jpeg",
+      src="background_images/home_bg.jpg",
       width=self.page.window.width,
       height=self.page.window.height,
       fit=ft.ImageFit.COVER,

@@ -114,7 +114,7 @@ class GenerateReceipt(ft.UserControl):
         controls=[
           # Background image for the receipt page
           ft.Image(
-            src="assets/receipt.jpeg",
+            src="background_images/receipt_bg.jpg",
             width=self.page.window.width,
             height=self.page.window.height,
             fit=ft.ImageFit.COVER,

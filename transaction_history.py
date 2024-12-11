@@ -70,7 +70,7 @@ class GenerateHistory(ft.UserControl):
         controls=[
           # Background image for the transaction history page
           ft.Image(
-            src="assets/trans_hist.jpeg",
+            src="background_images/transaction_hist_bg.jpg",
             width=self.page.window.width,
             height=self.page.window.height,
             fit=ft.ImageFit.COVER,

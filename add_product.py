@@ -81,7 +81,7 @@ class AddProductPage(ft.UserControl):
         alignment=ft.Alignment(0.0, 0.0),
         controls=[
           ft.Image(
-            src="assets/Update_stock2.jpeg",
+            src="background_images/add_product_bg.jpg",
             width=self.page.window.width,
             height=self.page.window.height,
             fit=ft.ImageFit.COVER,

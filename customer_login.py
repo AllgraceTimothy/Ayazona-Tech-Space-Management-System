@@ -100,7 +100,7 @@ class CustomerLoginPage(ft.UserControl):
                 alignment=ft.Alignment(0.0, 0.0),
                 controls=[
                     ft.Image(
-                        src="assets/customer_login2.jpeg",
+                        src="background_images/customer_login_bg.jpg",
                         width=self.page.window.width,
                         height=self.page.window.height,
                         fit=ft.ImageFit.COVER,

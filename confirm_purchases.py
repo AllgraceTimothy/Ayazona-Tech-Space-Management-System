@@ -127,11 +127,11 @@ class CheckPurchasesPage(ft.UserControl):
         controls=[
           # Background image for the page
           ft.Image(
-            src="assets/cust_dash.jpeg",
+            src="background_images/cart_bg.jpg",
             width=self.page.window.width,
             height=self.page.window_height,
             fit=ft.ImageFit.COVER,
-            opacity=0.05,
+            opacity=0.15,
           ),
           # Main content (purchase review)
           ft.Column(
