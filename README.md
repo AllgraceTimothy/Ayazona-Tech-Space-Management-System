@@ -24,27 +24,29 @@
 
 # 📦 Installation Instructions
  ## Prerequisites:
+  - Code Editor. Can be VSCode, Pycharm e.t.c
   - Install Python (version 3.7 or higher).
   - Install SQLite3 (comes pre-installed with Python in most environments).
  ## Steps:
   1. Create a virtual environment
-   - python -m venv env (env-name of your virtual environment. Can be anything)
+   - Give the following command in the terminal -> "python -m venv env" (env-name of your virtual environment. Can be anything)
   2. Navgate into your virtual environment
-   - env\Scripts\activate (again {env} can be anything)
+   - Give the following command in the terminal -> "env\Scripts\activate" (again {env} can be anything)
   3. Clone the Repository in your virtual environment:
-   - git clone https://github.com/AllgraceTimothy/Ayazona-TechPlace-Management-System.git
-   - cd Ayazona-TechPlace-Management-System
+   - Give the following command in the terminal -> "git clone https://github.com/AllgraceTimothy/Ayazona-TechPlace-Management-System.git"
+   - Give the following command in the terminal -> "cd Ayazona-TechPlace-Management-System"
   4. Install Dependencies:
-   - pip install -r requirements.txt
+   - Give the following command in the terminal -> "pip install -r requirements.txt"
   5. Run the Application:
-   - In desktop GUI: flet run landing_page.py
-   - In a we browser: flet run --web landing_page.py
+   - In desktop GUI: Give the following command in the terminal -> "flet run landing_page.py"
+   - In a we browser: Give the following command in the terminal -> "flet run --web landing_page.py"
   6. Open the Application in your Browser or on the provided desktop GUI
 
 # 📖 Usage
  1. Manager Login:
   - Use your manager credentials to log in.
   - Navigate to the dashboard to manage inventory, update stock, and edit product prices.
+  - The Manager's Secret Key Value is set to "sct_key.765"
 
  2. Customer Login:
   - Log in with your customer credentials.
