@@ -27,15 +27,19 @@
   - Install Python (version 3.7 or higher).
   - Install SQLite3 (comes pre-installed with Python in most environments).
  ## Steps:
-  1. Clone the Repository:
+  1. Create a virtual environment
+   - python -m venv env (env-name of your virtual environment. Can be anything)
+  2. Navgate into your virtual environment
+   - env\Scripts\activate (again {env} can be anything)
+  3. Clone the Repository in your virtual environment:
    - git clone https://github.com/AllgraceTimothy/Ayazona-TechPlace-Management-System.git
-   - cd ayazona-techplace
-  2. Install Dependencies:
+   - cd Ayazona-TechPlace-Management-System
+  4. Install Dependencies:
    - pip install -r requirements.txt
-  3. Run the Application:
+  5. Run the Application:
    - In desktop GUI: flet run landing_page.py
    - In a we browser: flet run --web landing_page.py
-  4. Open the Application in your Browser or on the provided desktop GUI
+  6. Open the Application in your Browser or on the provided desktop GUI
 
 # 📖 Usage
  1. Manager Login:
