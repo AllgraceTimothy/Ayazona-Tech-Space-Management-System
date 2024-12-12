@@ -72,9 +72,18 @@ class ManagerLoginPage(ft.UserControl):
             return
 
         # Verify login credentials
-        authenticated = verify_login("manager", user_name, password, secret_key)
+        manager_existence = verify_login("manager", user_name, password, secret_key)
+
+        # Checks if the manager exists
+        if manager_existence is None:
+            self.page.snack_bar = ft.SnackBar(ft.Text("A manager with the provided username does not exist. Kindly ensure you have an account first before attempting to login."), open=True)
+            self.page.update()
+            return
+        authenticated, manager_id, manager_name = manager_existence
 
         if authenticated:
+            self.page.session.set("manager_id", manager_id)
+            self.page.session.set("manager_name", manager_name)
             self.page.snack_bar = ft.SnackBar(ft.Text("Login sucessful. Redirecting to the Manager's dashboard...."), open=True)
             self.page.update()
             from routes import navigate

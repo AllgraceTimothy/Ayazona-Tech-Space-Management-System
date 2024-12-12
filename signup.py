@@ -1,6 +1,6 @@
 import flet as ft
 import re
-from Ayazona_db_manager import save_customer, save_manager
+from Ayazona_db_manager import save_customer, save_manager, get_customer_details, get_manager_details
 SECRET_KEY = "sct_key.765"
 
 class SignUpPage(ft.UserControl):
@@ -11,6 +11,9 @@ class SignUpPage(ft.UserControl):
     self.page.title = 'Sign Up'
     self.page.window.width = 720
     self.page.window.height = 650
+
+    self.customers = []
+    self.managers = []
 
     self.account_type = ft.Dropdown(
       label="Account Type",
@@ -67,6 +70,13 @@ class SignUpPage(ft.UserControl):
     password = self.password.value
     entered_secret_key = self.secret_key.value
 
+    self.customers = get_customer_details()
+    self.managers = get_manager_details()
+
+    username_exists = any(customer[1] == username for customer in self.customers) or any(manager[1] == username for manager in self.managers)
+
+    email_exists = any(customer[2] == email for customer in self.customers) or any(manager[2] == email for manager in self.managers)
+
     if self.account_type.value == "Customer":
       if not username or not email or not password:
         self.status.value = "Please fill in all the fields"
@@ -79,6 +89,12 @@ class SignUpPage(ft.UserControl):
         self.page.update(self.status)
       elif not self.validate_password(password):
         self.status.value = "Password should be at least 8 characters long and contain at least one number,\none uppercase letter, and one special character"
+        self.page.update(self.status)
+      elif username_exists:
+        self.status.value = "The provided username has already been taken"
+        self.page.update(self.status)
+      elif email_exists:
+        self.status.value = "The provided email address already exists in our database"
         self.page.update(self.status)
       else:
         success = save_customer(username, email, password)

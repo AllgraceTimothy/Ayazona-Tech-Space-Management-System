@@ -60,19 +60,21 @@ class CustomerLoginPage(ft.UserControl):
         """Handle the login process when the login button is clicked."""
         user_name = self.user_name_field.value
         password = self.password_field.value
+
         if not user_name or not password:
             self.status.value = "Please fill in both fields"
             self.page.update(self.status)
             return
 
         # Verify login credentials
-        authenticated_info = verify_login("Customer", user_name, password)
+        customer_existence = verify_login("Customer", user_name, password)
 
-        if authenticated_info is None:
-            self.page.snack_bar = ft.SnackBar(ft.Text("Invalid username or password"), open=True)
+        # Checks if the customer exists
+        if customer_existence is None:
+            self.page.snack_bar = ft.SnackBar(ft.Text("A customer with the provided username does not exist. Kindly ensure you have an account first before attempting to log in."), open=True)
             self.page.update()
             return
-        authenticated, customer_id, customer_name = authenticated_info
+        authenticated, customer_id, customer_name = customer_existence
 
         if authenticated:
             self.page.session.set("customer_id", customer_id)
