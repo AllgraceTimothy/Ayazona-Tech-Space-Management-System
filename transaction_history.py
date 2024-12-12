@@ -19,6 +19,18 @@ class GenerateHistory(ft.UserControl):
     self.page.window.width = 880
     self.page.window.height = 700
 
+    self.back_to_dashboard_btn = ft.ElevatedButton(
+      text="Back to Dashboard",
+      on_click=self.back_to_dashboard,
+      width=200,
+      height=40,
+      bgcolor=ft.colors.AMBER_800,
+      color=ft.colors.WHITE,
+      style=ft.ButtonStyle(
+        shape=ft.RoundedRectangleBorder(radius=20),
+      )
+    )
+
   def generate_history(self):
     """Fetches the transaction history for the customer using the customer ID."""
     self.transaction_history = transaction_history(self.customer_id)
@@ -34,8 +46,29 @@ class GenerateHistory(ft.UserControl):
 
     # If no transaction history is found, displays a message
     if not self.transaction_history:
-      self.page.snack_bar = ft.SnackBar(ft.Text("No transactions have been made yet."), open=True)
-      self.page.update()
+      return ft.Stack(
+      alignment=ft.Alignment(0.0, 0.0),
+        controls=[
+          # Background image for the transaction history page
+          ft.Image(
+            src="background_images/transaction_hist_bg.jpg",
+            width=self.page.window.width,
+            height=self.page.window.height,
+            fit=ft.ImageFit.COVER,
+            opacity=0.3,
+          ),
+          ft.Column(
+          width=self.page.window.width,
+          height=self.page.window.height,
+          controls=[
+            ft.Text("No transactions have been made yet.", size=26, weight="bold", text_align="center"),
+            self.back_to_dashboard_btn,
+          ],
+          alignment=ft.MainAxisAlignment.CENTER,
+          horizontal_alignment=ft.CrossAxisAlignment.CENTER,
+          )
+        ]
+      )
 
     # Process each transaction item and prepare rows for the data table
     self.rows = []
@@ -96,17 +129,7 @@ class GenerateHistory(ft.UserControl):
               # Display total expenditure
               ft.Text(f"Total Expenditure: Ksh {self.total_price:.2f}", size=26, weight="bold"),
                # Back button to navigate to the dashboard
-              ft.ElevatedButton(
-                text="Back to Dashboard",
-                on_click=self.back_to_dashboard,
-                width=200,
-                height=40,
-                bgcolor=ft.colors.AMBER_800,
-                color=ft.colors.WHITE,
-                style=ft.ButtonStyle(
-                  shape=ft.RoundedRectangleBorder(radius=20),
-                )
-              ),
+              self.back_to_dashboard_btn,
             ],
             spacing=0,
             alignment=ft.MainAxisAlignment.CENTER,

@@ -11,6 +11,8 @@ class CustomerDashboard(ft.UserControl):
     self.page.window.width = 850
     self.page.window.height = 700
 
+    self.customer_id = self.page.session.get('customer_id')
+
     self.current_page = 1
     self.rows_per_page = 5
     self.total_items = get_inventory_count()
@@ -54,7 +56,7 @@ class CustomerDashboard(ft.UserControl):
         shape=ft.RoundedRectangleBorder(radius=16),
       )
     )
-    self.transaction_history = ft.ElevatedButton(
+    self.transaction_history_btn = ft.ElevatedButton(
       text="View Transaction History",
       on_click=self.to_transaction_history,
       width=230,
@@ -272,7 +274,7 @@ class CustomerDashboard(ft.UserControl):
               ft.Row(
                 alignment=ft.MainAxisAlignment.CENTER,
                 controls=[
-                  self.transaction_history,
+                  self.transaction_history_btn,
                 ]
               ),
               ft.Row(
