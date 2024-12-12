@@ -62,7 +62,7 @@ class UpdateStockPage(ft.UserControl):
     self.data = get_product_details()[offset:offset + self.rows_per_page]
 
     if not self.data:
-      self.page.snack_bar = ft.SnackBar(ft.Text("No inventory data found"))
+      self.page.snack_bar = ft.SnackBar(ft.Text("No inventory data found"), open=True)
       self.page.update()
       return
     
@@ -124,11 +124,11 @@ class UpdateStockPage(ft.UserControl):
       self.page.update()
       return
     elif new_stock and not self.is_valid_number(new_stock):
-      self.page.snack_bar = ft.SnackBar(ft.Text("Invalid stock input! Must be a whole number. Please try again"))
+      self.page.snack_bar = ft.SnackBar(ft.Text("Invalid stock input! Must be a whole number. Please try again"), open=True)
       self.page.update()
       return
     elif new_price and not self.is_valid_number(new_price, allow_float=True):
-      self.page.snack_bar = ft.SnackBar(ft.Text("Invalid price input! Must be a real number. Please try again"))
+      self.page.snack_bar = ft.SnackBar(ft.Text("Invalid price input! Must be a real number. Please try again"), open=True)
       self.page.update()
       return
     else:

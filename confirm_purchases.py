@@ -70,6 +70,8 @@ class CheckPurchasesPage(ft.UserControl):
     if success:
       self.view_receipt_btn.disabled = False
       self.page.update(self.view_receipt_btn)
+      self.page.snack_bar = ft.SnackBar(ft.Text("Purchase Confirmed Successfully"), open=True)
+      self.page.update()
     else:
       self.confirm_btn.disabled = False
     self.page.update()

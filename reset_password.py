@@ -164,6 +164,7 @@ class ChangePasswordPage(ft.UserControl):
           self.page.update(self.status2)
         else:
           self.page.snack_bar = ft.SnackBar(ft.Text("An error occured while resetting the password"), open=True)
+          self.page.update()
 
   def back_to_login(self, e):
     from routes import navigate
