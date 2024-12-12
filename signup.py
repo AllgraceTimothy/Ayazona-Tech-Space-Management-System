@@ -73,9 +73,9 @@ class SignUpPage(ft.UserControl):
     self.customers = get_customer_details()
     self.managers = get_manager_details()
 
-    username_exists = any(customer[1] == username for customer in self.customers) or any(manager[1] == username for manager in self.managers)
+    username_exists = any(customer[1] == username for customer in self.customers) if self.account_type.value == "Customer" else any(manager[1] == username for manager in self.managers)
 
-    email_exists = any(customer[2] == email for customer in self.customers) or any(manager[2] == email for manager in self.managers)
+    email_exists = any(customer[2] == email for customer in self.customers) if self.account_type.value == "Customer" else any(manager[2] == email for manager in self.managers)
 
     if self.account_type.value == "Customer":
       if not username or not email or not password:
@@ -122,6 +122,12 @@ class SignUpPage(ft.UserControl):
         self.page.update(self.status)
       elif not self.validate_password(password):
         self.status.value = "Password should be at least 8 characters long and contain at least one number,\none uppercase letter, and one special character"
+        self.page.update(self.status)
+      elif username_exists:
+        self.status.value = "The provided username has already been taken"
+        self.page.update(self.status)
+      elif email_exists:
+        self.status.value = "The provided email address already exists in our database"
         self.page.update(self.status)
       else:
         success = save_manager(username, email, password)
