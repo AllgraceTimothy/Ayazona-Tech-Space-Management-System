@@ -1,5 +1,5 @@
 import flet as ft
-from Ayazona_db_manager import verify_login
+from Ayazona_db_manager import verify_login, get_manager_details
 
 class ManagerLoginPage(ft.UserControl):
     def __init__(self, page: ft.Page, **kwargs):
@@ -9,6 +9,8 @@ class ManagerLoginPage(ft.UserControl):
         self.page.window.width = 720
         self.page.window.height = 650
         page.vertical_alignment = ft.MainAxisAlignment.CENTER
+
+        self.managers = []
 
         self.login_btn = ft.ElevatedButton(
             text="Login",
@@ -66,20 +68,28 @@ class ManagerLoginPage(ft.UserControl):
         password = self.password_field.value
         secret_key = self.secret_key_field.value
 
+        self.managers = get_manager_details()
+        username_exists = any(manager[1] == user_name for manager in self.managers)
+
         if not user_name or not password or not secret_key:
             self.status.value = "Kindly fill in all the fields"
             self.page.update(self.status)
             return
-
-        # Verify login credentials
-        manager_existence = verify_login("manager", user_name, password, secret_key)
-
         # Checks if the manager exists
-        if manager_existence is None:
-            self.page.snack_bar = ft.SnackBar(ft.Text("A manager with the provided username does not exist. Kindly ensure you have an account first before attempting to login."), open=True)
+        elif not username_exists:
+            self.page.snack_bar = ft.SnackBar(ft.Text("A manager with the provided username does not exist. Kindly ensure you have an account first before attempting to log in."), open=True)
             self.page.update()
             return
-        authenticated, manager_id, manager_name = manager_existence
+
+        # Verify login credentials
+        authenticated_info = verify_login("manager", user_name, password, secret_key)
+
+        if authenticated_info is None:
+            self.page.snack_bar = ft.SnackBar(ft.Text("Invalid username, password, or secret key. Please ensure the details are correct."), open=True)
+            self.page.update()
+            return
+
+        authenticated, manager_id, manager_name = authenticated_info
 
         if authenticated:
             self.page.session.set("manager_id", manager_id)
@@ -88,9 +98,6 @@ class ManagerLoginPage(ft.UserControl):
             self.page.update()
             from routes import navigate
             navigate(self.page, "MANAGER_DASHBOARD")
-        else:
-            self.page.snack_bar = ft.SnackBar(ft.Text("Invalid username, password or secret key."), open=True)
-            self.page.update()
 
     def go_home(self, e):
         """Navigate to the home page."""

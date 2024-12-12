@@ -1,5 +1,5 @@
 import flet as ft
-from Ayazona_db_manager import verify_login
+from Ayazona_db_manager import verify_login, get_customer_details
 
 class CustomerLoginPage(ft.UserControl):
     def __init__(self, page: ft.Page, **kwargs):
@@ -9,6 +9,8 @@ class CustomerLoginPage(ft.UserControl):
         self.page.window.width = 720
         self.page.window.height = 650
         page.vertical_alignment = ft.MainAxisAlignment.CENTER
+
+        self.customers = []
 
         self.login_btn = ft.ElevatedButton(
             text="Login",
@@ -61,20 +63,27 @@ class CustomerLoginPage(ft.UserControl):
         user_name = self.user_name_field.value
         password = self.password_field.value
 
+        self.customers = get_customer_details()
+        username_exists = any(customer[1] == user_name for customer in self.customers)
+
         if not user_name or not password:
             self.status.value = "Please fill in both fields"
             self.page.update(self.status)
             return
-
-        # Verify login credentials
-        customer_existence = verify_login("Customer", user_name, password)
-
         # Checks if the customer exists
-        if customer_existence is None:
+        elif not username_exists:
             self.page.snack_bar = ft.SnackBar(ft.Text("A customer with the provided username does not exist. Kindly ensure you have an account first before attempting to log in."), open=True)
             self.page.update()
             return
-        authenticated, customer_id, customer_name = customer_existence
+
+        # Verify login credentials
+        authenticated_info = verify_login("Customer", user_name, password)
+
+        if authenticated_info is None:
+            self.page.snack_bar = ft.SnackBar(ft.Text("Invalid username or password"), open=True)
+            self.page.update()
+            
+        authenticated, customer_id, customer_name = authenticated_info
 
         if authenticated:
             self.page.session.set("customer_id", customer_id)
@@ -83,9 +92,6 @@ class CustomerLoginPage(ft.UserControl):
             self.page.update()
             from routes import navigate
             navigate(self.page, "CUSTOMER_DASHBOARD")
-        else:
-            self.page.snack_bar = ft.SnackBar(ft.Text("Invalid username or password"), open=True)
-            self.page.update()
 
     def go_home(self, e):
         """Navigate to the home page."""
