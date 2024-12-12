@@ -6,7 +6,7 @@ class ChangePasswordPage(ft.UserControl):
   def __init__(self, page: ft.Page, **kwargs):
     super().__init__(**kwargs)
     self.page = page
-    self.page.title = "Change Password"
+    self.page.title = "Reset Password"
     self.customer_id = self.page.session.get('customer_id')
     self.page.window.width = 720
     self.page.window.height = 680
@@ -81,6 +81,9 @@ class ChangePasswordPage(ft.UserControl):
       return
   
     if self.account_type.value == "Customer":
+      if not self.customers:
+        self.page.snack_bar = ft.SnackBar(ft.Text("No customer accounts have been opened yet"), open=True)
+        self.page.update()
       for customer in self.customers:
         if customer[2] == email:
           self.new_password.disabled = False
@@ -95,6 +98,9 @@ class ChangePasswordPage(ft.UserControl):
           self.page.update(self.status)
 
     elif self.account_type.value == "Manager":
+      if not self.managers:
+        self.page.snack_bar = ft.SnackBar(ft.Text("No manager accounts have been opened yet"), open=True)
+        self.page.update()
       for manager in self.managers:
         if manager[2] == email:
           self.new_password.disabled = False
