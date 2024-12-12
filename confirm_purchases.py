@@ -106,9 +106,9 @@ class CheckPurchasesPage(ft.UserControl):
         ft.DataRow(
           cells=[
             ft.DataCell(ft.Text(product_name)),
-            ft.DataCell(ft.Text(f"Ksh. {unit_price}")),
+            ft.DataCell(ft.Text(f"Ksh {unit_price}")),
             ft.DataCell(ft.Text(str(pr_quantity))),
-            ft.DataCell(ft.Text(f"Ksh. {float(pr_quantity) * float(unit_price):.2f}")),
+            ft.DataCell(ft.Text(f"Ksh {float(pr_quantity) * float(unit_price):.2f}")),
           ]
         )
         for product_id, product_name, pr_quantity, unit_price in self.selected_items
@@ -117,7 +117,7 @@ class CheckPurchasesPage(ft.UserControl):
 
     # Total cost text
     total_cost_text = ft.Text(
-      f"Overall Total Cost: Ksh. {self.calculate_total_cost():.2f}", size=24, weight="bold"
+      f"Overall Total Cost: Ksh {self.calculate_total_cost():.2f}", size=24, weight="bold"
     )
 
     # Layout container for the page

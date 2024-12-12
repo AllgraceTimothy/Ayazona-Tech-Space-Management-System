@@ -34,15 +34,9 @@ class GenerateHistory(ft.UserControl):
 
     # If no transaction history is found, displays a message
     if not self.transaction_history:
-      return ft.Column(
-        controls=[
-          ft.Text("No transaction history found", size=20, color="red"),
-        ],
-        alignment=ft.MainAxisAlignment.CENTER,
-        horizontal_alignment=ft.CrossAxisAlignment.CENTER,
-        expand=True,
-      )
-    
+      self.page.snack_bar = ft.SnackBar(ft.Text("No transactions have been made yet."), open=True)
+      self.page.update()
+
     # Process each transaction item and prepare rows for the data table
     self.rows = []
     self.total_price = 0
@@ -100,7 +94,7 @@ class GenerateHistory(ft.UserControl):
                 rows=self.rows
               ),
               # Display total expenditure
-              ft.Text(f"Total Expenditure: Ksh. {self.total_price:.2f}", size=26, weight="bold"),
+              ft.Text(f"Total Expenditure: Ksh {self.total_price:.2f}", size=26, weight="bold"),
                # Back button to navigate to the dashboard
               ft.ElevatedButton(
                 text="Back to Dashboard",

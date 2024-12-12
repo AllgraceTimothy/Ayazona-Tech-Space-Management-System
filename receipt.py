@@ -55,8 +55,8 @@ class GenerateReceipt(ft.UserControl):
           [
             ft.DataCell(ft.Text(product_name)),
             ft.DataCell(ft.Text(str(pr_quantity))),
-            ft.DataCell(ft.Text(f"Ksh. {unit_price:.2f}")),
-            ft.DataCell(ft.Text(f"Ksh. {total_price:.2f}")),
+            ft.DataCell(ft.Text(f"Ksh {unit_price:.2f}")),
+            ft.DataCell(ft.Text(f"Ksh {total_price:.2f}")),
           ]
         )
       )
@@ -90,7 +90,7 @@ class GenerateReceipt(ft.UserControl):
           rows=row,
         ),
         ft.Text("------------------------------------------------------------"),
-        ft.Text(f"Total Price: Ksh. {totalprice:.2f}", size=22, weight="bold"),
+        ft.Text(f"Total Price: Ksh {totalprice:.2f}", size=22, weight="bold"),
         ft.Text("------------------------------------------------------------"),
       ]
     )
