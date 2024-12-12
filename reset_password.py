@@ -36,8 +36,8 @@ class ChangePasswordPage(ft.UserControl):
       width=350,
         )
     
-    self.status = ft.Text(value="", color="")
-    self.status2 = ft.Text(value="", color="")
+    self.status = ft.Text(value="", color="", text_align="center")
+    self.status2 = ft.Text(value="", color="", text_align="center")
 
     self.go_btn = ft.ElevatedButton(
       text="Go",
