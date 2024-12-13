@@ -39,50 +39,50 @@
 3. **Install Git**
 - Ensure Git is installed.
  ```bash
-    git --version
+ git --version
  ```
 - If not installed download it [here](https://git-scm.com/downloads)
 4. **Install virtualenv**
 - This enables you to create and work in a virtual environment.
  ```bash
-    pip install virtualenv
+ pip install virtualenv
  ```
 5. **Create a virtual environment**
  ```bash
-    python -m venv env
+ python -m venv env
  ```
 - Replace env with your desired environment name.
 - It might take a while kindly remain patient 😇
 6. **Activate the virtual environment**
 - Windows
  ```bash
-    env\Scripts\activate
+ env\Scripts\activate
  ```
 - macOS/Linux:
  ```bash
-     source env/bin/activate
+ source env/bin/activate
  ```
 7. **Clone the Repository**
  ```bash
-     git clone https://github.com/AllgraceTimothy/Ayazona-Tech-Space-Management-System
+ git clone https://github.com/AllgraceTimothy/Ayazona-Tech-Space-Management-System
  ```
 8. **Navigate into the Projects Directory**
  ```bash
-    cd Ayazona-Tech-Space-Management-System
+ cd Ayazona-Tech-Space-Management-System
  ```
 9. **Install Dependencies**
  ```bash
-    pip install -r requirements.txt
+ pip install -r requirements.txt
  ```
 - It might also take a while 😇
 10. **Run the Application**
 - Desktop GUI: 
  ```bash
-    flet run landing_page.py
+ flet run landing_page.py
  ```
 - Web browser: 
  ```bash
-    flet run --web landing_page.py
+ flet run --web landing_page.py
  ```
 ---
 
