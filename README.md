@@ -1,76 +1,115 @@
 # Ayazona Tech-Space Management System
-  - A powerful and user-friendly solution for managing shopping mall inventory and facilitating customer purchases. Built with Flet for an intuitive user interface and SQLite3 for a reliable and efficient backend.
+ A powerful and user-friendly solution for managing shopping mall inventory and facilitating customer purchases. Built with Flet for an intuitive user interface and SQLite3 for a reliable and efficient backend.
 
-# 🚀 Features
- ## Manager Dashboard:
-  - Add, update, and manage inventory in real-time.
-  - Edit stock levels and unit prices seamlessly.
-  - Monitor inventory changes with ease.
- ## Customer Dashboard:
-  - Browse available products in a simple and intuitive interface.
-  - Make secure purchases effortlessly.
- ## Secure Login System:
-  - Separate login for managers and customers.
-  - User's credentials are securely stored in the database.
- ## Real-Time Inventory Updates:
-  - Automatic stock adjustment after customer purchases.
-  - Instantly updated stock availability for both managers and customers.
- ## Purchase History Tracking:
-  - Maintains a detailed record of customer purchases, including:
-   - Product: Name and ID.
-   - Quantity: Number of items purchased.
-   - Total Price: Cost of the purchase.
-   - Date: Transaction date for reference.
+ ---
 
-# 📦 Installation Instructions
- ## Prerequisites:
-  - Code Editor. Can be VSCode, Pycharm e.t.c
-  - Install Python (version 3.7 or higher).
-  - Install SQLite3 (comes pre-installed with Python in most environments).
- ## Steps:
-  1. Create a folder in your desired location.
-  2. Navigate into your folder from your Code Editor.
-  3. Create a virtual environment in this folder
-   - Give the following command in the terminal -> "python -m venv env" (env-name of your virtual environment. Can be anything)
-   - Might take some time kindly remain patient 😇
-  4. Navigate into your virtual environment
-   - Give the following command in the terminal -> "env\Scripts\activate" (again {env} can be anything)
-  5. Clone the Repository in your virtual environment:
-   - Give the following command in the terminal -> "git clone https://github.com/AllgraceTimothy/Ayazona-Tech-Space-Management-System"
-   - Give the following command in the terminal -> "cd Ayazona-Tech-Space-Management-System"
-  6. Install Dependencies:
-   - Give the following command in the terminal -> "pip install -r requirements.txt"
-   - Might also take a while 😇
-  7. Run the Application:
-   - In desktop GUI: Give the following command in the terminal -> "flet run landing_page.py"
-   - In a we browser: Give the following command in the terminal -> "flet run --web landing_page.py"
-  8. Open the Application in your Browser or on the provided desktop GUI
+## 🚀 Features
+ ### Manager Dashboard:
+  - Add, update, and manage inventory in real-time.
+  - Edit stock levels and unit prices seamlessly.
+  - Monitor inventory changes with ease.
+ ### Customer Dashboard:
+  - Browse available products in a simple and intuitive interface.
+  - Make secure purchases effortlessly.
+ ### Secure Login System:
+  - Separate login for managers and customers.
+  - User's credentials are securely stored in the database.
+ ### Real-Time Inventory Updates:
+  - Automatic stock adjustment after customer purchases.
+  - Instantly updated stock availability for both managers and customers.
+ ### Purchase History Tracking:
+  - Maintains a detailed record of customer purchases, including:
+   - **Product**: Name and ID.
+   - **Quantity**: Number of items purchased.
+   - **Total Price**: Cost of the purchase.
+   - **Date**: Transaction date for reference.
 
-# 📖 Usage
- 1. Manager Login:
-  - Use your manager credentials to log in.
-  - Navigate to the dashboard to manage inventory, update stock, and edit product prices.
-  - The Manager's Secret Key Value is set to "sct_key.765"
+---
 
- 2. Customer Login:
-  - Log in with your customer credentials.
-  - Browse products, make purchases, and receive real-time updates.
+## 📦 Installation Instructions
+ ### Prerequisites:
+  - A code editor (e.g., VSCode, PyCharm).
+  - Python (version 3.7 or higher).
+  - SQLite3 (comes pre-installed with Python in most environments).
+  - Git.
+ ### Steps:
+  1. **Create a Project Folder**
+ Choose a desired location on your computer and create a folder for the project.
+  2. **Navigate into the Folder**
+ Open the folder in your code editor.
+  3. **Install Git**
+ Ensure Git is installed.
+ ```bash
+    git --version
+ ```
+    - If not installed download it [here](https://git-scm.com/downloads)
+  4. **Install virtualenv**
+ This enables you to create and work in a virtual environment.
+ ```bash
+    pip install virtualenv
+ ```
+  5. **Create a virtual environment**
+ ```bash
+    python -m venv env
+ ```
+ Replace env with your desired environment name.
+ It might take a while kindly remain patient 😇
+  6. **Activate the virtual environment**
+   - Windows
+ ```bash
+    env\Scripts\activate
+ ```
+   - macOS/Linux:
+ ```bash
+     source env/bin/activate
+ ```
+  7. **Clone the Repository**
+ ```bash
+     git clone https://github.com/AllgraceTimothy/Ayazona-Tech-Space-Management-System
+ ```
+  8. **Navigate into the Projects Directory**
+ ```bash
+     cd Ayazona-Tech-Space-Management-System
+ ```
+  9. **Install Dependencies**
+ ```bash
+     pip install -r requirements.txt
+ ```
+    - It might also take a while 😇
+  10. **Run the Application**
+ Desktop GUI: 
+ ```bash
+     flet run landing_page.py
+ ```
+ Web browser: 
+ ```bash
+     flet run --web landing_page.py
+ ```
 
- 3. Tracking Purchases:
-  - The system automatically records all customer transactions for future reference.
+## 📖 Usage
+ 1. **Manager Login**
+  - Use manager credentials to log in.
+  - Navigate to the dashboard to manage inventory, update stock, and edit product prices.
+  - Default Manager's Secret Key: sct_key.765
 
-# 🛠️ Technologies Used
- - Frontend: Flet (Python-Based GUI framework)
- - Backend: SQLite3 Database
- - Programming Language: Python
- - Libraries Used:
-  - datetime (tracking purchase dates)
-  - flet (GUI framework)
-  - re (validating format of username, email, and password)
+ 2. **Customer Login**
+  - Log in with customer credentials.
+  - Browse products, make purchases, view your receipt, and view transaction history.
 
-# 👥 Contributors
- - Timothy Allgrace (https://github.com/AllgraceTimothy) - Developer
+ 3. **Tracking Purchases**
+  - The system automatically records all customer transactions for future reference.
 
-# 📝 License
- - This project is licensed under the MIT License.
+## 🛠️ Technologies Used
+ - ***Frontend***: Flet (Python-Based GUI framework)
+ - ***Backend:*** SQLite3 Database
+ - ***Programming Language:*** Python
+ - ***Libraries:***
+  - datetime: (Tracking purchase dates)
+  - flet: (GUI development)
+  - re: (Input validation)
 
+## 👥 Contributors
+ - [Timothy Allgrace](https://github.com/AllgraceTimothy) - Developer
+
+## 📝 License
+ - This project is licensed under the MIT License.
