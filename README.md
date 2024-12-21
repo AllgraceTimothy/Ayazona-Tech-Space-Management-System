@@ -56,11 +56,11 @@
 6. **Activate the virtual environment**
 - Windows
  ```bash
- .env\Scripts\activate
+ .env\Scripts\activate
  ```
 - macOS/Linux:
  ```bash
- source env/bin/activate
+ source .env/bin/activate
  ```
 7. **Clone the Repository**
  ```bash
