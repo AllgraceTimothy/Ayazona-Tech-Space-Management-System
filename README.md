@@ -49,7 +49,7 @@
  ```
 5. **Create a virtual environment**
  ```bash
- python -m venv env
+ python -m venv .env
  ```
 - Replace env with your desired environment name.
 - It might take a while kindly remain patient 😇
