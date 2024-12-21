@@ -56,7 +56,7 @@
 6. **Activate the virtual environment**
 - Windows
  ```bash
- env\Scripts\activate
+ .env\Scripts\activate
  ```
 - macOS/Linux:
  ```bash
