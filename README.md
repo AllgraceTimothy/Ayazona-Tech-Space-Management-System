@@ -2,6 +2,36 @@
  - A powerful and user-friendly solution for managing shopping mall inventory and facilitating customer purchases. Built with Flet for an intuitive user interface and SQLite3 for a reliable and efficient backend.
 
 ---
+## Screenshots
+
+### 1. Welcome Screen
+The initial view that greets users.
+
+![Welcome Screen](https://i.ibb.co/dt9VfRL/welcome.jpg)
+
+---
+
+### 2. Create Account
+A user-friendly interface for account creation.
+![Create Account Screen](https://i.ibb.co/vX7Jvsv/create-account.jpg)
+
+---
+
+### 3. Update Stock
+Easily update inventory with accurate details.
+![Stock Screen](https://i.ibb.co/5cH4sqs/stock.jpg)
+
+---
+
+### 4. Purchase and Receipt
+Simplify purchases and generate receipts instantly.
+
+**Purchase Screen**  
+![Purchase Screen](https://i.ibb.co/1rmPSBD/purchase.jpg)
+
+**Receipt Screen**  
+![Receipt Screen](https://i.ibb.co/p3QMpY3/receipt.jpg)
+
 
 ## 🚀 Features
 ### Manager Dashboard:
