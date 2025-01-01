@@ -6,19 +6,20 @@
 
 ### 1. Welcome Screen
 The initial view that greets users.
-![Welcome Screen](https://i.ibb.co/r3PzQVc/welcome.png)
+
+![Welcome Screen](https://i.ibb.co/dt9VfRL/welcome.jpg)
 
 ---
 
 ### 2. Create Account
 A user-friendly interface for account creation.
-![Create Account](https://i.ibb.co/Vw7vpHp/create-account.png)
+![Create Account Screen](https://i.ibb.co/vX7Jvsv/create-account.jpg)
 
 ---
 
 ### 3. Update Stock
 Easily update inventory with accurate details.
-![Update Stock](https://i.ibb.co/2K4hcXc/stock.png)
+![Stock Screen](https://i.ibb.co/5cH4sqs/stock.jpg)
 
 ---
 
@@ -26,10 +27,10 @@ Easily update inventory with accurate details.
 Simplify purchases and generate receipts instantly.
 
 **Purchase Screen**  
-![Purchase Screen](https://i.ibb.co/v3jTtf7/purchase.png)
+![Purchase Screen](https://i.ibb.co/1rmPSBD/purchase.jpg)
 
 **Receipt Screen**  
-![Receipt Screen](https://i.ibb.co/jLzQFnL/receipt.png)
+![Receipt Screen](https://i.ibb.co/p3QMpY3/receipt.jpg)
 
 
 ## 🚀 Features
